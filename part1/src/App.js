@@ -9,11 +9,11 @@ const Hello = (props) => {
 const App = () => {
   const age = 21;
   return(
-    <div>
+    <>
       <h1>Greetings</h1>
       <Hello name="Vicky" age={23 + 1} />
       <Hello name="Harry" age={age} />
-    </div>
+    </>
   )
 };
 
