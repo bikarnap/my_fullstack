@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-const Hello = ({props}) => {
-  const name = props.name;
-  const age = props.age;
-  const bornYear = () =>new Date().getFullYear() - props.age;
+const Hello = (props) => {
+  const { name, age } = props;
+  const bornYear = () =>new Date().getFullYear() - age;
   
   return (
     <div>
