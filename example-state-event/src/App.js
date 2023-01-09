@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-const Hello = (props) => {
-  const { name, age } = props;
+const Hello = ({ name, age }) => {
   const bornYear = () =>new Date().getFullYear() - age;
   
   return (
