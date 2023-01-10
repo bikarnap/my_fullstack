@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const Display = (props) => <div>{props.counter}</div>;
-const Button = (props) => <button onClick={props.onClick}>{props.label}</button>;
+const Display = ({ counter }) => <div>{counter}</div>;
+const Button = ({ onClick, label }) => <button onClick={onClick}>{label}</button>;
 
 function App(props) {
   const [ counter, setCounter ] = useState(0);
