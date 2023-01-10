@@ -1,30 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-const Hello = ({ name, age }) => {
-  const bornYear = () =>new Date().getFullYear() - age;
-  
+const App = () => {
+  const [left, setLeft] = useState(0);
+  const [right, setRight] = useState(0);
+
   return (
     <div>
-      <p>
-        Hello {name}, you are {age} years old
-      </p>
-      <p>So you were probably born in {bornYear()}</p>
+      {left}
+      <button onClick={() => setLeft(left + 1)}>
+        left
+      </button>
+      <button onClick={() => setRight(right + 1)}>
+        right
+      </button>
+      {right}
     </div>
   );
 };
-
-function App() {
-  const name = 'Peter';
-  const age = 10;
-
-  return (
-    <div>
-     <h1>Greetings</h1>
-     <Hello name="Maya" age={26 + 10} />
-     <Hello name={name} age={age} />
-    </div>
-  );
-}
 
 export default App;
