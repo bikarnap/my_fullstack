@@ -1,4 +1,4 @@
-const Note = ({ note }) => <li>{note}</li>
+import Note from './components/Note';
 
 const App = ({ notes }) => {
   return (
