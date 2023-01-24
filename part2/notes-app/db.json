@@ -4,7 +4,7 @@
       "id": 1,
       "content": "HTML is easy",
       "date": "2022-1-17T17:30:31.098Z",
-      "important": true
+      "important": false
     },
     {
       "id": 2,
@@ -23,6 +23,18 @@
       "date": "2023-01-24T07:19:30.121Z",
       "important": true,
       "id": 4
+    },
+    {
+      "content": "If frontend is not your piece of cake, select backend!",
+      "date": "2023-01-24T07:57:48.252Z",
+      "important": true,
+      "id": 5
+    },
+    {
+      "content": "Extracting backend into its own module is done!",
+      "date": "2023-01-24T08:04:07.928Z",
+      "important": true,
+      "id": 6
     }
   ]
 }
