@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 let notes = [
   {
     id: 1,
@@ -42,6 +44,18 @@ app.get('/ap/notes/:id', (req, res) => {
   notes = notes.filter(note => note.id !== id);
   
   res.status(204).end();
+});
+
+app.post('/api/notes', (req, res) => {
+  const note = req.body;
+
+  const maxId = notes.length > 0
+    ? Math.max(...notes.map(n => n.id))
+    : 0;
+  
+  note.id = maxId + 1;
+  notes = notes.concat(note);
+  res.json(note);
 });
 
 const PORT = 3001;
